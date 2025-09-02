@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Chelsea FC</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome (para os ícones) via CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Configuração de cores e fontes customizadas para o Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Cor ajustada para um tom de azul menos saturado
+                        'chelsea-blue': '#0A4DAA', 
+                        'chelsea-active-bg': '#0D6ADF',
+                        'dark-bg': '#15181C',
+                        'dark-card': '#1E2732',
+                        'dark-border': '#38444d',
+                        'light-text': '#D9D9D9',
+                        'subtle-text': '#8899A6',
+                        'accent-blue': '#1D9BF0',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Importa a fonte Inter do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilo para a barra de rolagem para um visual mais integrado */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #15181C;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #38444d;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4a5a7b;
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-light-text font-sans flex justify-center min-h-screen">
+
+    <div class="flex w-full max-w-7xl">
+
+        <!-- ======================================= -->
+        <!-- ========= BARRA LATERAL (ESQUERDA) ==== -->
+        <!-- ======================================= -->
+        <header class="w-full max-w-[280px] h-screen flex flex-col p-5 sticky top-0">
+            <div class="bg-chelsea-blue w-full h-full rounded-2xl flex flex-col p-4">
+                <!-- Logo e Nome do Clube -->
+                <div class="flex items-center gap-4 mb-8 flex-shrink-0">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/c/cf/Chelsea_FC.svg" alt="Logo do Chelsea" class="h-10 w-10 bg-white rounded-full p-1">
+                    <h1 class="text-2xl font-bold text-white tracking-wide">CHELSEA</h1>
+                </div>
+
+                <!-- Menu de Navegação -->
+                <nav class="flex flex-col gap-2">
+                    <a href="#" class="flex items-center gap-4 py-3 px-4 rounded-full hover:bg-chelsea-active-bg/70 transition-colors duration-200">
+                        <i class="fa-solid fa-house w-6 text-xl"></i>
+                        <span class="font-semibold text-lg">PARA VOCÊ</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-4 py-3 px-4 rounded-full hover:bg-chelsea-active-bg/70 transition-colors duration-200">
+                        <i class="fa-solid fa-comments w-6 text-xl"></i>
+                        <span class="font-semibold text-lg">MENSAGENS</span>
+                    </a>
+                    <!-- Item Ativo -->
+                    <a href="#" class="flex items-center gap-4 py-3 px-4 rounded-full bg-white text-chelsea-blue transition-colors duration-200">
+                        <i class="fa-solid fa-user-group w-6 text-xl"></i>
+                        <span class="font-bold text-lg">CLUBE</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-4 py-3 px-4 rounded-full hover:bg-chelsea-active-bg/70 transition-colors duration-200">
+                        <i class="fa-solid fa-gear w-6 text-xl"></i>
+                        <span class="font-semibold text-lg">CONFIGURAÇÕES</span>
+                    </a>
+                </nav>
+
+                <!-- Botão Novo Post (Ajustado) -->
+                <button class="w-full bg-accent-blue hover:bg-accent-blue/90 text-white font-bold py-3.5 px-4 rounded-full flex items-center justify-center gap-2 transition-colors duration-200 text-lg mt-6">
+                    <i class="fa-solid fa-plus text-md"></i>
+                    <span>NOVO POST</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- ======================================= -->
+        <!-- ========= CONTEÚDO PRINCIPAL ========= -->
+        <!-- ======================================= -->
+        <main class="flex-1 border-l border-r border-dark-border max-w-2xl">
+            <!-- (O conteúdo do feed permanece o mesmo) -->
+            <section class="relative">
+                <div class="h-64 bg-cover bg-center" style="background-image: url('https://i.postimg.cc/y8B4Wshw/chelsea-banner.jpg')"></div>
+                <div class="p-4 sm:p-6">
+                    <div class="flex justify-between items-start -mt-24">
+                        <div class="flex items-end gap-4">
+                            <div class="relative">
+                               <img src="https://upload.wikimedia.org/wikipedia/pt/c/cf/Chelsea_FC.svg" alt="Foto de perfil do Chelsea" class="w-36 h-36 rounded-full border-4 border-dark-bg bg-white p-2">
+                            </div>
+                            <div class="mb-2">
+                                <h2 class="text-2xl sm:text-3xl font-extrabold text-white flex items-center gap-2">
+                                    CHELSEA
+                                    <i class="fa-solid fa-certificate text-accent-blue text-xl" title="Verificado"></i>
+                                </h2>
+                                <p class="text-subtle-text text-md">@chelseafc</p>
+                            </div>
+                        </div>
+                        <button class="border-2 border-dark-border rounded-full py-2 px-4 hover:bg-dark-card transition-colors duration-200 font-semibold">
+                            Editar Perfil
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <nav class="flex border-b border-dark-border">
+                <a href="#" class="flex-1 text-center py-3 font-bold text-white hover:bg-dark-card/70 transition-colors duration-200 relative">
+                    FEED
+                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-1 bg-accent-blue rounded-full"></div>
+                </a>
+                <a href="#" class="flex-1 text-center py-3 font-semibold text-subtle-text hover:bg-dark-card/70 transition-colors duration-200">
+                    INFORMAÇÕES
+                </a>
+            </nav>
+            <section>
+                <article class="flex items-start gap-4 p-4 sm:p-6 border-b border-dark-border hover:bg-dark-card/30 transition-colors duration-200">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/c/cf/Chelsea_FC.svg" alt="Avatar do autor" class="w-12 h-12 rounded-full bg-white p-1 flex-shrink-0">
+                    <div class="w-full">
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center gap-2 flex-wrap">
+                                <span class="font-bold hover:underline cursor-pointer">Chelsea FC</span>
+                                <i class="fa-solid fa-certificate text-accent-blue text-sm"></i>
+                                <span class="text-subtle-text">@chelseafc · 1h</span>
+                            </div>
+                            <button class="text-subtle-text hover:text-accent-blue rounded-full h-8 w-8 flex items-center justify-center hover:bg-accent-blue/10">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+                        </div>
+                        <div class="mt-2 space-y-3">
+                            <p>Vitória com gosto especial! 🙌<br>Hoje os jogadores foram espetaculares, uma performance totalmente digna de campeões. 🏆</p>
+                            <p class="text-accent-blue">#VitoriaDoClube #Mercado #FestaNaTorcida #Chelsea</p>
+                        </div>
+                        <div class="mt-4">
+                           <img src="https://i.postimg.cc/tJnB8HjP/chelsea-post.jpg" alt="Comemoração dos jogadores do Chelsea" class="w-full rounded-2xl border border-dark-border">
+                        </div>
+                        <div class="flex justify-around items-center mt-4 text-subtle-text">
+                            <button class="flex items-center gap-2 group"><i class="fa-regular fa-comment text-xl group-hover:text-accent-blue"></i> <span class="group-hover:text-accent-blue">1.2k</span></button>
+                            <button class="flex items-center gap-2 group"><i class="fa-regular fa-heart text-xl group-hover:text-pink-500"></i> <span class="group-hover:text-pink-500">25k</span></button>
+                            <button class="flex items-center gap-2 group"><i class="fa-regular fa-star text-xl group-hover:text-yellow-500"></i> <span class="group-hover:text-yellow-500">5.8k</span></button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <!-- ======================================= -->
+        <!-- ========= BARRA LATERAL (DIREITA) ===== -->
+        <!-- ======================================= -->
+        <aside class="w-full max-w-[350px] p-5 sticky top-0 h-screen hidden lg:block">
+            <div class="space-y-6">
+                <!-- Título da Seção -->
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-lightbulb text-accent-blue text-2xl"></i>
+                    <h2 class="text-2xl font-bold text-accent-blue">Sugestões</h2>
+                </div>
+
+                <!-- Card de Clubes -->
+                <div class="bg-dark-card rounded-2xl p-4 space-y-4">
+                    <h3 class="text-xl font-bold">Clubes</h3>
+                    <!-- Item de Clube -->
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg/240px-FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg.png" alt="Logo do Bayern" class="w-10 h-10 rounded-full">
+                            <div>
+                                <p class="font-semibold">Bayern de Munique</p>
+                                <p class="text-sm text-subtle-text">@fcbayern</p>
+                            </div>
+                        </div>
+                        <button class="bg-light-text text-dark-bg font-bold rounded-full py-1.5 px-4 flex items-center gap-2 text-sm hover:opacity-90 transition-opacity">
+                            <i class="fa-solid fa-plus"></i> Seguir
+                        </button>
+                    </div>
+                    <!-- Item de Clube -->
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                             <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/Real_Madrid_CF.svg/360px-Real_Madrid_CF.svg.png" alt="Logo do Real Madrid" class="w-10 h-10 rounded-full">
+                            <div>
+                                <p class="font-semibold">Real Madrid</p>
+                                <p class="text-sm text-subtle-text">@realmadrid</p>
+                            </div>
+                        </div>
+                        <button class="bg-light-text text-dark-bg font-bold rounded-full py-1.5 px-4 flex items-center gap-2 text-sm hover:opacity-90 transition-opacity">
+                            <i class="fa-solid fa-plus"></i> Seguir
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card Social -->
+                <div class="bg-dark-card rounded-2xl p-4 space-y-4">
+                    <h3 class="text-xl font-bold text-accent-blue">Social</h3>
+                    <!-- Item Social -->
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://pbs.twimg.com/profile_images/1781657853999083520/HBEsf3yM_400x400.jpg" alt="Logo do Fabrizio Romano" class="w-10 h-10 rounded-full">
+                            <div>
+                                <p class="font-semibold">Fabrizio Romano</p>
+                                <p class="text-sm text-subtle-text">@FabrizioRomano</p>
+                            </div>
+                        </div>
+                        <button class="bg-light-text text-dark-bg font-bold rounded-full py-1.5 px-4 flex items-center gap-2 text-sm hover:opacity-90 transition-opacity">
+                            <i class="fa-solid fa-plus"></i> Seguir
+                        </button>
+                    </div>
+                     <!-- Item Social -->
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <img src="https://pbs.twimg.com/profile_images/1640629259740262402/hEtV22ry_400x400.jpg" alt="Logo da Premier League" class="w-10 h-10 rounded-full">
+                            <div>
+                                <p class="font-semibold">Premier League</p>
+                                <p class="text-sm text-subtle-text">@premierleague</p>
+                            </div>
+                        </div>
+                        <button class="bg-light-text text-dark-bg font-bold rounded-full py-1.5 px-4 flex items-center gap-2 text-sm hover:opacity-90 transition-opacity">
+                            <i class="fa-solid fa-plus"></i> Seguir
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Rede Social Responsivo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <div class="flex min-h-screen">
+        
+        <aside class="hidden md:flex w-64 bg-blue-800 text-white flex-col p-4">
+            <div class="flex items-center mb-10">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png" alt="Logo do Clube" class="h-10 w-10 mr-3">
+                <h1 class="text-2xl font-bold">CHELSEA</h1>
+            </div>
+
+            <nav class="flex flex-col space-y-2">
+                <a href="#" class="flex items-center py-3 px-4 bg-white text-blue-800 rounded-lg font-bold">
+                    <ion-icon name="home-outline" class="text-2xl mr-3"></ion-icon>
+                    PARA VOCÊ
+                </a>
+                <a href="#" class="flex items-center py-3 px-4 hover:bg-blue-700 rounded-lg">
+                    <ion-icon name="chatbubbles-outline" class="text-2xl mr-3"></ion-icon>
+                    MENSAGENS
+                </a>
+                <a href="#" class="flex items-center py-3 px-4 hover:bg-blue-700 rounded-lg">
+                   <ion-icon name="shield-outline" class="text-2xl mr-3"></ion-icon>
+                    CLUBE
+                </a>
+                <a href="#" class="flex items-center py-3 px-4 hover:bg-blue-700 rounded-lg">
+                    <ion-icon name="settings-outline" class="text-2xl mr-3"></ion-icon>
+                    CONFIGURAÇÕES
+                </a>
+                <a href="#" class="flex items-center py-3 px-4 hover:bg-blue-700 rounded-lg">
+                    <ion-icon name="add-circle-outline" class="text-2xl mr-3"></ion-icon>
+                    NOVO POST
+                </a>
+            </nav>
+        </aside>
+
+        <main class="flex-1 p-4 md:p-8">
+            <div class="flex border-b mb-6">
+                <div class="relative">
+                    <h2 class="text-xl font-bold text-blue-600 pb-2">ATLETAS</h2>
+                    <div class="absolute bottom-0 left-0 w-[120%] h-1 bg-blue-600"></div>
+                </div>
+                <h2 class="text-xl font-bold text-gray-400 pb-2 ml-8">SOCIAL</h2>
+            </div>
+            
+            <div class="relative w-full bg-gray-200 h-48 md:h-64 rounded-lg mb-8 flex items-center justify-center">
+                <p class="text-gray-500">[Carrossel com algumas imagens passando]</p>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-4 sm:p-6">
+                <div class="flex items-center mb-4">
+                    <img src="https://i.pravatar.cc/150?u=joao" alt="Foto de perfil" class="h-12 w-12 rounded-full mr-4">
+                    <div>
+                        <p class="font-bold text-blue-600">João Vinícius</p>
+                    </div>
+                </div>
+
+                <p class="text-gray-700 mb-4">
+                    Uma descrição qualquer para preencher este espaço. Este card mostra como o conteúdo principal da postagem seria exibido, com texto, tags e uma imagem principal.
+                </p>
+
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="text-blue-600 border border-blue-600 rounded-full px-3 py-1 text-sm">#talentosDaBase</span>
+                    <span class="text-blue-600 border border-blue-600 rounded-full px-3 py-1 text-sm">#promessa</span>
+                    <span class="text-blue-600 border border-blue-600 rounded-full px-3 py-1 text-sm">#futebol</span>
+                </div>
+
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200" alt="Jogador de futebol" class="w-full h-auto rounded-lg">
+                    <div class="absolute bottom-4 right-4 flex space-x-3 bg-white/80 p-2 rounded-full">
+                         <button class="text-gray-600 hover:text-blue-500">
+                           <ion-icon name="chatbubble-ellipses-outline" class="text-2xl"></ion-icon>
+                        </button>
+                        <button class="text-gray-600 hover:text-red-500">
+                           <ion-icon name="heart-outline" class="text-2xl"></ion-icon>
+                        </button>
+                        <button class="text-gray-600 hover:text-yellow-500">
+                            <ion-icon name="star-outline" class="text-2xl"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+
+                 <div class="mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                     <a href="#" class="text-blue-600 font-semibold hover:underline">Entre em contato</a>
+                     <div class="flex items-center space-x-3">
+                         <button class="bg-lime-400 text-black font-bold py-2 px-6 rounded-lg hover:bg-lime-500 transition-colors">
+                            Tenho interesse
+                        </button>
+                        <button class="bg-white border border-gray-300 h-10 w-10 flex items-center justify-center rounded-full hover:bg-gray-100">
+                            <ion-icon name="arrow-forward-outline" class="text-xl text-gray-700"></ion-icon>
+                        </button>
+                     </div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="hidden lg:block w-80 bg-white p-6 border-l">
+            <h3 class="text-blue-600 font-bold text-lg mb-4">SUGESTÕES</h3>
+
+            <div class="mb-8">
+                <h4 class="text-blue-600 font-semibold mb-3">CLUBES</h4>
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Escudo_do_Sport_Club_Internacional.svg/1200px-Escudo_do_Sport_Club_Internacional.svg.png" alt="Logo Inter" class="h-8 w-8 rounded-full mr-3">
+                            <span>Inter</span>
+                        </div>
+                        <button class="text-blue-500 border border-blue-500 rounded-full px-4 py-1 text-sm font-semibold hover:bg-blue-50">Seguir +</button>
+                    </div>
+                     <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/1200px-Palmeiras_logo.svg.png" alt="Logo Palmeiras" class="h-8 w-8 rounded-full mr-3">
+                            <span>Palmeiras</span>
+                        </div>
+                        <button class="text-blue-500 border border-blue-500 rounded-full px-4 py-1 text-sm font-semibold hover:bg-blue-50">Seguir +</button>
+                    </div>
+                     <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/a/a2/Associa%C3%A7%C3%A3o_Ferrovi%C3%A1ria_de_Esportes_logo.png/1200px-Associa%C3%A7%C3%A3o_Ferrovi%C3%A1ria_de_Esportes_logo.png" alt="Logo Ferroviária" class="h-8 w-8 rounded-full mr-3">
+                            <span>Ferroviária</span>
+                        </div>
+                        <button class="text-blue-500 border border-blue-500 rounded-full px-4 py-1 text-sm font-semibold hover:bg-blue-50">Seguir +</button>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-blue-600 font-semibold mb-3">SOCIAL</h4>
+                 <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <img src="https://i.pravatar.cc/150?u=joao.p" alt="Avatar" class="h-8 w-8 rounded-full mr-3">
+                            <span>João P.</span>
+                        </div>
+                        <button class="text-blue-500 border border-blue-500 rounded-full px-4 py-1 text-sm font-semibold hover:bg-blue-50">Seguir +</button>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <img src="https://i.pravatar.cc/150?u=luan" alt="Avatar" class="h-8 w-8 rounded-full mr-3">
+                            <span>Luan</span>
+                        </div>
+                        <button class="text-blue-500 border border-blue-500 rounded-full px-4 py-1 text-sm font-semibold hover:bg-blue-50">Seguir +</button>
+                    </div>
+                     <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <img src="https://i.pravatar.cc/150?u=marcos" alt="Avatar" class="h-8 w-8 rounded-full mr-3">
+                            <span>Marcos</span>
+                        </div>
+                        <button class="text-blue-500 border border-blue-500 rounded-full px-4 py-1 text-sm font-semibold hover:bg-blue-50">Seguir +</button>
+                    </div>
+                </div>
+            </div>
+
+        </aside>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-screen w-screen bg-gray-900 flex items-center justify-center">
+
+  <!-- Container -->
+  <div class="relative w-full h-full flex items-center justify-center md:justify-start px-6 sm:px-12 md:px-20 bg-black">
+    <!-- Imagem de fundo -->
+    <img src="fundo.png" 
+         alt="Quadra de basquete"
+         class="absolute inset-0 w-full h-full object-cover opacity-80">
+
+    <!-- Conteúdo -->
+    <div class="relative text-white w-full max-w-lg flex flex-col items-center md:items-start">
+
+      <!-- Texto motivacional -->
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight text-center md:text-left">
+        SE VOCÊ ACREDITA...
+      </h1>
+      <p class="text-xl sm:text-2xl md:text-3xl mb-12 text-center md:text-left">
+        O <span class="text-blue-500 font-semibold">mundo</span> também vai.
+      </p>
+
+      <!-- Formulário -->
+      <form class="space-y-8 w-full">
+        
+        <!-- E-mail -->
+        <div>
+          <label for="email" class="block text-lg font-semibold text-blue-500 mb-2">
+            E-mail
+          </label>
+       <input type="email" id="email" placeholder="Digite seu e-mail"
+       class="w-full px-6 py-4 rounded-lg bg-white/10 backdrop-blur-md border border-white 
+              focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-300 text-lg">
+        </div>
+
+        <!-- Senha -->
+        <div>
+          <label for="password" class="block text-lg font-semibold text-blue-500 mb-2">
+            Senha
+          </label>
+       <input type="password" id="password" placeholder="Digite sua senha"
+       class="w-full px-6 py-4 rounded-lg bg-white/10 backdrop-blur-md border border-white 
+              focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-300 text-lg">
+          <!-- Esqueci a senha -->
+          <p class="text-sm text-blue-400 mt-3 hover:underline cursor-pointer text-right md:text-left">
+            Esqueci a senha
+          </p>
+        </div>
+
+        <!-- Botão -->
+   <div class="flex justify-start -mt-2 ml-4">
+  <button type="submit"
+          class="w-1/3 flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 rounded-full transition text-lg">
+    ENTRAR
+    <span class="ml-2 flex items-center justify-center w-5 h-5 bg-white rounded-full text-blue-600 font-bold">
+      ➔
+    </span>
+  </button>
+</div>
+          <!-- Cadastro -->
+          <p class="text-base text-gray-300 mt-10 text-center md:text-left">
+            Ainda não tem <a href="#" class="text-blue-500 hover:underline">cadastro?</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
