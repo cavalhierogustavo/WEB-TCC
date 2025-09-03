@@ -1,0 +1,179 @@
+:root {
+    --primary-blue: #0039aa;
+    --dark-blue: #054d96;
+    --light-blue-text: #004aa5;
+    --gradient-start: #4A5A9E;
+    --gradient-end: #5a6cb2;
+    --button-blue: #013ecb;
+    --background-form: #ffffff; /* Fundo branco sólido */
+    --background-progress-bar: #e4e6eb76;
+    --text-white: #ffffff;
+    --text-gray: #888;
+    --input-background: #f8f9fa;
+    --highlight-blue: #5D9CEC;
+}
+
+/* Reset básico para garantir que nenhum navegador estrague */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Deixando o corpo da página pronto pro show */
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+    background-color: #fff; /* Fundo branco */
+}
+
+body {
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/*TODOS OS CONTAINERS*/
+.site-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.content-column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*ONDE O FORMULÁRIO BRILHA*/
+.main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--background-form);
+    padding: 70px 40px; /* Aumentado */
+    border-radius: 30px; /* Bordas mais arredondadas */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07); /* Sombra mais suave */
+}
+
+/*BARRA DE PROGRESSO*/
+.progress-section {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px; /* Espaço entre a barra e a caixa */
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 40px; /* Mais alta */
+    margin: 0 auto; /* Centralizada */
+    border-radius: 50px; /* Forma de pílula */
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    box-shadow: 0 5px 15px rgba(74, 90, 158, 0.3); /* Sombra da barra */
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.runner-icon {
+    position: absolute;
+    right: 65px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-white);
+    line-height: 1;
+}
+
+.progress-percentage {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-white);
+}
+
+/* Título de sucesso */
+.success-title {
+    color: var(--dark-blue);
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.highlight-blue {
+    background: linear-gradient(to right, var(--highlight-blue), var(--dark-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/*A FRASE DE IMPACTO*/
+.marketing-section p {
+    width: 100%;
+    color: #d0d0d0; /* Cinza claro */
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 900;
+    line-height: 1.2;
+    text-shadow: none; /* Removida sombra padrão */
+}
+
+/*RESPONSIVIDADE --- */
+@media (min-width: 992px) {
+    .site-container {
+        flex-direction: row;
+        justify-content: center; /* Centraliza os itens */
+        max-width: 1200px;
+        gap: 80px; /* Mais espaço entre as colunas */
+        align-items: center;
+    }
+
+    .content-column {
+        flex: 0 1 500px;
+    }
+
+    .marketing-section {
+        flex: 1 1 450px;
+        max-width: 450px;
+        text-align: left;
+        align-self: center; /* Centralizado verticalmente */
+        padding-bottom: 0;
+    }
+    
+    .marketing-section p {
+         text-align: left;
+         font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px 15px;
+    }
+    .main-content-wrapper {
+        padding: 40px 20px;
+    }
+    .success-title {
+        font-size: 2.8rem;
+    }
+    .marketing-section p {
+        font-size: 1.5rem;
+    }
+}
+
