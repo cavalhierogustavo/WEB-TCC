@@ -1,0 +1,432 @@
+/* ======================================= */
+/* ========= VARIÁVEIS E GLOBAIS ========= */
+/* ======================================= */
+:root {
+    --brand-green: #30C757; /* Verde principal da imagem */
+    --brand-green-dark: #28a94a; /* Um verde um pouco mais escuro para hover */
+    --brand-green-light: #4CAF50; /* Verde claro para badges e títulos */
+    --gray-bg: #f3f4f6;
+    --gray-text: #374151;
+    --gray-light: #9ca3af;
+    --gray-border: #e0e0e0; /* Bordas um pouco mais claras */
+    --pink-500: #ef4444; /* Cor de like do dashboard */
+    --yellow-500: #eab308; /* Cor de star do dashboard */
+    --dark-text: #212121; /* Texto mais escuro para o feed */
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--gray-bg);
+    font-family: 'Inter', sans-serif;
+    color: var(--gray-text);
+}
+
+/* ======================================= */
+/* ============ LAYOUT PRINCIPAL ========= */
+/* ======================================= */
+.site-container {
+    display: flex;
+    width: 100%;
+    /* max-width e margin: 0 auto foram removidos para alinhar à esquerda */
+}
+
+.main-content {
+    flex: 1; 
+    max-width: 672px;
+    border-left: 1px solid var(--gray-border);
+    border-right: 1px solid var(--gray-border);
+    background-color: var(--white);
+    /* Adicionado margin: 0 auto para centralizar o conteúdo principal ENTRE as sidebars */
+    margin: 0 auto;
+}
+
+/* ======================================= */
+/* ======= BARRA LATERAL (ESQUERDA) ====== */
+/* ======================================= */
+.sidebar-left {
+    display: none;
+    width: 256px;
+    background-color: var(--brand-green);
+    color: var(--white);
+    flex-direction: column;
+    padding: 16px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    flex-shrink: 0;
+}
+
+.logo-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.logo-img {
+    height: 40px;
+    width: 40px;
+    margin-right: 12px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.logo-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--white);
+    transition: background-color 0.2s;
+}
+.nav-item ion-icon {
+    font-size: 24px;
+    margin-right: 12px;
+}
+.nav-item:hover {
+    background-color: var(--brand-green-dark);
+}
+.nav-item.active {
+    background-color: var(--white);
+    color: var(--brand-green);
+    font-weight: bold;
+}
+
+
+/* ======================================= */
+/* ========= CONTEÚDO PRINCIPAL ========== */
+/* ======================================= */
+.profile-header {
+    position: relative;
+    border-bottom: 1px solid var(--gray-border);
+}
+
+.profile-banner {
+    height: 256px;
+    background-size: cover;
+    background-position: center;
+    background-image: url('campo2.png');
+}
+
+.profile-details-wrapper {
+    padding: 16px;
+}
+
+.profile-info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: -80px;
+}
+
+.profile-main-info {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+.profile-avatar {
+    width: 134px;
+    height: 134px;
+    border-radius: 9999px;
+    border: 4px solid var(--white);
+    background-color: var(--white);
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile-name-handle {
+    margin-bottom: 8px;
+}
+
+.profile-name {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--dark-text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.verified-badge {
+    color: var(--brand-green-light);
+    font-size: 20px;
+}
+.verified-badge.small {
+    font-size: 16px;
+}
+
+.profile-handle {
+    color: var(--gray-light);
+    font-size: 16px;
+}
+
+.btn-edit-profile {
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-left: 250px;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-edit-profile:hover {
+    background-color: var(--gray-bg);
+}
+
+.content-nav {
+    display: flex;
+    border-bottom: 1px solid var(--gray-border);
+}
+
+.content-nav-link {
+    flex: 1;
+    text-align: center;
+    padding: 16px 0;
+    font-weight: 600;
+    color: var(--gray-light);
+    text-decoration: none;
+    transition: background-color 0.2s;
+    position: relative;
+}
+.content-nav-link:hover {
+    background-color: var(--gray-bg);
+}
+.content-nav-link.active {
+    font-weight: 700;
+    color: var(--brand-green);
+}
+
+.active-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 64px;
+    height: 4px;
+    background-color: var(--brand-green);
+    border-radius: 9999px;
+}
+
+/* ======================================= */
+/* ====== SEÇÃO DE INFORMAÇÕES ==== */
+/* ======================================= */
+.info-section {
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.info-card {
+    background-color: var(--white);
+    border: 1px solid #d4f4db;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: box-shadow 0.2s;
+}
+.info-card:hover {
+    box-shadow: 0 4px 12px rgba(48, 199, 87, 0.15);
+}
+
+.info-card img {
+    width: 28px;
+    height: 28px;
+}
+
+.info-label {
+    font-size: 14px;
+    color: var(--gray-light);
+    font-weight: 500;
+}
+
+.info-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark-text);
+}
+
+.info-button-large {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--brand-green);
+    color: var(--white);
+    padding: 20px 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+.info-button-large:hover {
+    background-color: var(--brand-green-dark);
+}
+
+.info-button-large img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.info-buttons-small-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.info-button-small {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--brand-green);
+    color: var(--white);
+    padding: 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+.info-button-small:hover {
+    background-color: var(--brand-green-dark);
+}
+
+.info-button-small img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+/* ======================================= */
+/* ======= BARRA LATERAL (DIREITA) ======= */
+/* ======================================= */
+.sidebar-right {
+    display: none;
+    width: 320px;
+    background-color: var(--white);
+    padding: 24px;
+    border-left: 1px solid var(--gray-border);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    flex-shrink: 0;
+}
+
+.sidebar-title {
+    color: var(--brand-green-light);
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.suggestion-group {
+    margin-bottom: 32px;
+}
+
+.suggestion-subtitle {
+    color: var(--brand-green-light);
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.suggestion-list > * + * {
+    margin-top: 12px;
+}
+
+.suggestion-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item-details {
+    display: flex;
+    align-items: center;
+    color: var(--dark-text);
+}
+.item-details img {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    margin-right: 12px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.item-details1 {
+    display: flex;
+    align-items: center;
+    color: var(--dark-text);
+}
+.item-details1 img {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    margin-right: 12px;
+    object-fit: cover;
+    object-position: center;
+}
+.suggestion-item:nth-child(1) .item-details img { content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Escudo_do_Sport_Club_Internacional.svg/1200px-Escudo_do_Sport_Club_Internacional.svg.png'); }
+.suggestion-item:nth-child(2) .item-details img { content: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/1200px-Palmeiras_logo.svg.png'); }
+.suggestion-item:nth-child(3) .item-details img { content: url('https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png'); }
+.suggestion-item:nth-child(4) .item-details img { content: url('https://i.pravatar.cc/150?u=joao.p'); }
+.suggestion-item:nth-child(5) .item-details img { content: url('https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png'); }
+.suggestion-item:nth-child(6) .item-details img { content: url('https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png'); }
+
+.btn-follow {
+    color: var(--brand-green);
+    border: 1px solid var(--brand-green);
+    background-color: transparent;
+    border-radius: 9999px;
+    padding: 4px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.btn-follow:hover {
+    background-color: #e8f5e9;
+}
+
+/* ======================================= */
+/* ============ RESPONSIVIDADE =========== */
+/* ======================================= */
+@media (min-width: 768px) {
+    .sidebar-left {
+        display: flex;
+    }
+}
+
+@media (min-width: 1100px) { /* Ajustado para dar mais espaço */
+    .sidebar-right {
+        display: block;
+    }
+}

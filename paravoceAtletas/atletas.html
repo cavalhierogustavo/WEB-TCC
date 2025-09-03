@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Rede Social Responsivo</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="site-container">
+        
+        <aside class="sidebar-left">
+            <div class="logo-header">
+                <img src="../img/bruno.png" alt="Logo do Clube" class="logo-img">
+                <h1 class="logo-title">Bruno</h1>
+            </div>
+
+            <nav class="main-nav">
+                <a href="../paravoceAtletas/atletas.html" class="nav-item active">
+                    <ion-icon name="home-outline"></ion-icon>
+                    <span>PARA VOCÊ</span>
+                </a>
+                <a href="../mensagens/mensagens.html" class="nav-item">
+                    <ion-icon name="chatbubbles-outline"></ion-icon>
+                    <span>MENSAGENS</span>
+                </a>
+                <a href="../feed/clube.html" class="nav-item">
+                   <ion-icon name="person-outline"></ion-icon>
+                    <span>PERFIL</span>
+                </a>
+                <a href="../configuracoes/configuracoes.html" class="nav-item">
+                    <ion-icon name="settings-outline"></ion-icon>
+                    <span>CONFIGURAÇÕES</span>
+                </a>
+                <a href="../ParavoceSocial/social.html?action=open_modal" class="nav-item">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                    <span>NOVO POST</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="content-tabs">
+                <div class="tab-item active">
+                    <a href="" style="text-decoration: none;"><h2>ATLETAS</h2></a>
+                    <div class="active-indicator"></div>
+                </div>
+                <div class="tab-item">
+                    <a href="../ParavoceSocial/social.html" style="text-decoration: none;"><h2>SOCIAL</h2></a>
+                </div>
+            </div>
+            
+            <div class="carousel-placeholder">
+                <p>[Carrossel com algumas imagens passando]</p>
+            </div>
+
+            <div class="post-card">
+                <div class="author-info">
+                    <img src="https://i.pravatar.cc/150?u=joao" alt="Foto de perfil" class="author-avatar">
+                    <div>
+                        <p class="author-name">João Vinícius</p>
+                    </div>
+                </div>
+
+                <p class="post-text">
+                    Uma descrição qualquer para preencher este espaço. Este card mostra como o conteúdo principal da postagem seria exibido, com texto, tags e uma imagem principal.
+                </p>
+
+                <div class="post-tags">
+                    <span class="tag">#talentosDaBase</span>
+                    <span class="tag">#promessa</span>
+                    <span class="tag">#futebol</span>
+                </div>
+
+                <div class="post-image-container">
+                    <img src="https://images.unsplash.com/photo-1553778263-73a83bab9b0c?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200" alt="Jogador de futebol" class="post-image">
+                    <div class="image-actions">
+                        <button class="action-btn">
+                            <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                        </button>
+                        <button class="action-btn like-btn">
+                            <ion-icon name="heart-outline"></ion-icon>
+                        </button>
+                        <button class="action-btn star-btn">
+                            <ion-icon name="star-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="post-footer">
+                    <a href="#" class="contact-link">Entre em contato</a>
+                    <div class="footer-actions">
+                        <button class="btn btn-primary">
+                            Tenho interesse
+                        </button>
+                        <button class="btn btn-secondary">
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="sidebar-right">
+            <h3 class="sidebar-title">SUGESTÕES</h3>
+
+            <div class="suggestion-group">
+                <h4 class="suggestion-subtitle">CLUBES</h4>
+                <div class="suggestion-list">
+                    <div class="suggestion-item">
+                        <div class="item-details">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Escudo_do_Sport_Club_Internacional.svg/1200px-Escudo_do_Sport_Club_Internacional.svg.png" alt="Logo Inter">
+                            <span>Inter</span>
+                        </div>
+                        <button class="btn-follow">Seguir +</button>
+                    </div>
+                    <div class="suggestion-item">
+                        <div class="item-details">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/1200px-Palmeiras_logo.svg.png" alt="Logo Palmeiras">
+                            <span>Palmeiras</span>
+                        </div>
+                        <button class="btn-follow">Seguir +</button>
+                    </div>
+                    <div class="suggestion-item">
+                        <div class="item-details">
+                            <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/a/a2/Associa%C3%A7%C3%A3o_Ferrovi%C3%A1ria_de_Esportes_logo.png/1200px-Associa%C3%A7%C3%A3o_Ferrovi%C3%A1ria_de_Esportes_logo.png" alt="Logo Ferroviária">
+                            <span>Ferroviária</span>
+                        </div>
+                        <button class="btn-follow">Seguir +</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="suggestion-group">
+                <h4 class="suggestion-subtitle">SOCIAL</h4>
+                 <div class="suggestion-list">
+                    <div class="suggestion-item">
+                        <div class="item-details">
+                            <img src="https://i.pravatar.cc/150?u=joao.p" alt="Avatar">
+                            <span>João P.</span>
+                        </div>
+                        <button class="btn-follow">Seguir +</button>
+                    </div>
+                    <div class="suggestion-item">
+                        <div class="item-details">
+                            <img src="https://i.pravatar.cc/150?u=luan" alt="Avatar">
+                            <span>Luan</span>
+                        </div>
+                        <button class="btn-follow">Seguir +</button>
+                    </div>
+                     <div class="suggestion-item">
+                        <div class="item-details">
+                            <img src="https://i.pravatar.cc/150?u=marcos" alt="Avatar">
+                            <span>Marcos</span>
+                        </div>
+                        <button class="btn-follow">Seguir +</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="site-container">
+        
+        <aside class="sidebar-left">
+            <div class="logo-header">
+                <img src="../img/bruno.png" alt="Avatar do Usuário" class="logo-img">
+                <h1 class="logo-title">Bruno</h1>
+            </div>
+            <nav class="main-nav">
+                <a href="../paravoceAtletas/atletas.html" class="nav-item">
+                    <ion-icon name="home-outline"></ion-icon>
+                    <span>PARA VOCÊ</span>
+                </a>
+                <a href="../mensagens/mensagens.html" class="nav-item">
+                    <ion-icon name="chatbubbles-outline"></ion-icon>
+                    <span>MENSAGENS</span>
+                </a>
+                <a href="../feed/clube.html" class="nav-item">
+                   <ion-icon name="person-outline"></ion-icon>
+                    <span>PERFIL</span>
+                </a>
+                <a href="#" class="nav-item active">
+                    <ion-icon name="settings-outline"></ion-icon>
+                    <span>CONFIGURAÇÕES</span>
+                </a>
+               <a href="../ParavoceSocial/social.html?action=open_modal" class="nav-item">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                    <span>NOVO POST</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h2 class="settings-title">Preferências</h2>
+            <div class="settings-group">
+                <div class="settings-item has-dropdown" id="notifications-trigger">
+                    <div class="settings-item-content">
+                        <ion-icon name="notifications-outline"></ion-icon>
+                        <span>Notificações</span>
+                    </div>
+                    <div class="settings-item-action">
+                        <span id="notifications-status">Personalizar</span>
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                    <div class="settings-dropdown" id="notifications-dropdown">
+                        <div class="dropdown-option">Ligado</div>
+                        <div class="dropdown-option">Desligado</div>
+                        <div class="dropdown-option">Personalizado</div>
+                    </div>
+                </div>
+                <div class="settings-item has-dropdown" id="theme-trigger">
+                    <div class="settings-item-content">
+                        <ion-icon name="color-palette-outline"></ion-icon>
+                        <span>Tema</span>
+                    </div>
+                    <div class="settings-item-action">
+                        <span id="theme-status">Claro</span>
+                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                    <div class="settings-dropdown" id="theme-dropdown">
+                        <div class="dropdown-option" data-theme="light">Claro</div>
+                        <div class="dropdown-option" data-theme="dark">Escuro</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="settings-title">Conta</h2>
+            <div class="settings-group">
+               <div class="settings-item" id="change-email-btn" style="cursor: pointer;">
+    <div class="settings-item-content">
+        <ion-icon name="mail-outline"></ion-icon>
+        <span>Email</span>
+    </div>
+    <div class="settings-item-action">
+        <span>Alterar</span>
+    </div>
+</div>
+<div class="settings-item" id="change-password-btn" style="cursor: pointer;">
+    <div class="settings-item-content">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <span>Senha</span>
+    </div>
+    <div class="settings-item-action">
+        <span>Alterar</span>
+    </div>
+</div>
+                <div class="settings-item">
+                    <div class="settings-item-content">
+                        <ion-icon name="key-outline"></ion-icon>
+                        <span>Autenticação de 2 fatores</span>
+                    </div>
+                    <div class="settings-item-action">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+                <a href="#" class="settings-item" id="logout-btn">
+                    <div class="settings-item-content">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                        <span>Sair</span>
+                    </div>
+                </a>
+                <a href="#" class="settings-item item-danger" id="delete-account-btn">
+                    <div class="settings-item-content">
+                        <ion-icon name="trash-outline"></ion-icon>
+                        <span>Excluir conta</span>
+                    </div>
+                </a>
+            </div>
+            
+            <h2 class="settings-title">Sobre</h2>
+            <div class="settings-group">
+                <a href="#" class="settings-item">
+                    <div class="settings-item-content">
+                        <ion-icon name="shield-checkmark-outline"></ion-icon>
+                        <span>Políticas de privacidade</span>
+                    </div>
+                </a>
+                <a href="#" class="settings-item">
+                    <div class="settings-item-content">
+                        <ion-icon name="document-text-outline"></ion-icon>
+                        <span>Termos e condições</span>
+                    </div>
+                </a>
+                <a href="#" class="settings-item">
+                    <div class="settings-item-content">
+                        <ion-icon name="information-circle-outline"></ion-icon>
+                        <span>Saiba mais</span>
+                    </div>
+                </a>
+            </div>
+        </main>
+
+        <aside class="sidebar-right">
+            <h3 class="sidebar-title">SUGESTÕES</h3>
+            <div class="suggestion-group">
+                <h4 class="suggestion-subtitle">CLUBES</h4>
+                <div class="suggestion-list">
+                    <div class="suggestion-item">
+                        <div class="item-details">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png" alt="Logo Chelsea">
+                            <span>Chelsea</span>
+                        </div>
+                        <button class="btn-follow">Seguir +</button>
+                    </div>
+                </div>
+            </div>
+            <div class="suggestion-group">
+                <h4 class="suggestion-subtitle">SOCIAL</h4>
+                <div class="suggestion-list">
+                    <div class="suggestion-item">
+                        <div class="item-details">
+                            <img src="https://i.pravatar.cc/150?u=joao.p" alt="Avatar">
+                            <span>João P.</span>
+                        </div>
+                        <button class="btn-follow">Seguir +</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+   <div id="confirmation-modal-overlay" class="modal-overlay hidden">
+    <div class="confirmation-modal-content">
+        <h2 id="confirmation-modal-text">Você realmente deseja fazer isso?</h2>
+        <div class="confirmation-modal-actions">
+            <button class="btn-confirm btn-no" id="confirm-no-btn">Não</button>
+            <button class="btn-confirm btn-yes" id="confirm-yes-btn">Sim</button>
+        </div>
+    </div>
+</div>
+
+
+<div id="email-modal-overlay" class="modal-overlay hidden">
+    <div class="edit-modal-container">
+        <h2 class="edit-modal-title">E-mail</h2>
+        <div class="input-wrapper">
+            <ion-icon name="at-outline"></ion-icon>
+            <input type="email" value="Vini.Cordeiro55@gmail.com">
+            <ion-icon name="create-outline" class="edit-icon"></ion-icon>
+        </div>
+        <div class="edit-modal-actions">
+            <button class="btn-action btn-back" id="email-modal-close">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+                <span>Voltar</span>
+            </button>
+            <button class="btn-action btn-save" id="email-modal-save">
+                <span>Salvar</span>
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
+        </div>
+
+        <div class="success-message hidden">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+            <p>Salvo com Sucesso!</p>
+        </div>
+    </div>
+</div>
+
+<div id="password-modal-overlay" class="modal-overlay hidden">
+    <div class="edit-modal-container">
+        <h2 class="edit-modal-title">Senha</h2>
+        <div class="input-wrapper">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <input type="password" placeholder="Nova senha">
+            <ion-icon name="create-outline" class="edit-icon"></ion-icon>
+        </div>
+        <div class="input-wrapper">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <input type="password" placeholder="Confirmar nova senha">
+            <ion-icon name="create-outline" class="edit-icon"></ion-icon>
+        </div>
+        <div class="edit-modal-actions">
+            <button class="btn-action btn-back" id="password-modal-close">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+                <span>Voltar</span>
+            </button>
+            <button class="btn-action btn-save" id="password-modal-save">
+                <span>Salvar</span>
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
+        </div>
+
+        <div class="success-message hidden">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+            <p>Salvo com Sucesso!</p>
+        </div>
+    </div>
+</div>
+
+
+
+   <script>
+document.addEventListener('DOMContentLoaded', () => {
+    // --- LÓGICA PARA TEMA (MODO ESCURO) ---
+    const themeStatus = document.getElementById('theme-status');
+    if (themeStatus) {
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+            themeStatus.textContent = 'Escuro';
+        } else {
+            document.body.classList.remove('dark-theme');
+            themeStatus.textContent = 'Claro';
+        }
+    }
+
+    // --- LÓGICA PARA DROPDOWNS ---
+    const setupDropdown = (triggerId, dropdownId, statusId) => {
+        const trigger = document.getElementById(triggerId);
+        const dropdown = document.getElementById(dropdownId);
+        const status = document.getElementById(statusId);
+
+        if (!trigger || !dropdown || !status) return;
+
+        trigger.addEventListener('click', (event) => {
+            event.stopPropagation();
+            closeAllDropdowns(dropdown);
+            dropdown.classList.toggle('active');
+        });
+
+        dropdown.addEventListener('click', (event) => {
+            const option = event.target.closest('.dropdown-option');
+            if (option) {
+                status.textContent = option.textContent;
+                dropdown.classList.remove('active');
+
+                if (dropdownId === 'theme-dropdown') {
+                    const theme = option.getAttribute('data-theme');
+                    if (theme === 'dark') {
+                        document.body.classList.add('dark-theme');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.body.classList.remove('dark-theme');
+                        localStorage.setItem('theme', 'light');
+                    }
+                }
+            }
+        });
+    };
+
+    const closeAllDropdowns = (exceptThisOne = null) => {
+        document.querySelectorAll('.settings-dropdown.active').forEach(dropdown => {
+            if (dropdown !== exceptThisOne) {
+                dropdown.classList.remove('active');
+            }
+        });
+    };
+
+    setupDropdown('notifications-trigger', 'notifications-dropdown', 'notifications-status');
+    setupDropdown('theme-trigger', 'theme-dropdown', 'theme-status');
+
+    // --- LÓGICA PARA MODAIS ---
+    const openModal = (modal) => {
+        if (modal) {
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+    };
+    const closeModal = (modal) => {
+        if (modal) {
+            modal.classList.add('hidden');
+            if (!document.querySelector('.modal-overlay:not(.hidden)')) {
+                document.body.style.overflow = 'auto';
+            }
+        }
+    };
+    
+    const showSuccessAndClose = (modalElement) => {
+        const successMessage = modalElement.querySelector('.success-message');
+        if (successMessage) {
+            successMessage.classList.remove('hidden');
+            
+            setTimeout(() => {
+                closeModal(modalElement);
+                setTimeout(() => {
+                    successMessage.classList.add('hidden');
+                }, 300);
+            }, 1500);
+        }
+    };
+
+    // Modal de confirmação (Sair / Excluir)
+    const logoutBtn = document.getElementById('logout-btn');
+    const deleteAccountBtn = document.getElementById('delete-account-btn');
+    const confirmationModal = document.getElementById('confirmation-modal-overlay');
+    if (confirmationModal) {
+        const confirmationText = document.getElementById('confirmation-modal-text');
+        const confirmYesBtn = document.getElementById('confirm-yes-btn');
+        const confirmNoBtn = document.getElementById('confirm-no-btn');
+        let currentAction = null;
+
+        const openConfirmationModal = (actionType) => {
+            currentAction = actionType;
+            if (actionType === 'logout') {
+                confirmationText.textContent = 'Você realmente deseja deslogar?';
+            } else if (actionType === 'delete_account') {
+                confirmationText.textContent = 'Tem certeza que deseja excluir sua conta? Esta ação é irreversível.';
+            }
+            openModal(confirmationModal);
+        };
+        
+        if (logoutBtn) logoutBtn.addEventListener('click', (e) => { e.preventDefault(); openConfirmationModal('logout'); });
+        if (deleteAccountBtn) deleteAccountBtn.addEventListener('click', (e) => { e.preventDefault(); openConfirmationModal('delete_account'); });
+        
+        if (confirmNoBtn) confirmNoBtn.addEventListener('click', () => closeModal(confirmationModal));
+        if (confirmYesBtn) confirmYesBtn.addEventListener('click', () => {
+            if (currentAction === 'logout') alert("Você foi deslogado.");
+            else if (currentAction === 'delete_account') alert("Sua conta foi excluída.");
+            closeModal(confirmationModal);
+        });
+    }
+
+    // Modal de Edição de Email
+    const changeEmailBtn = document.getElementById('change-email-btn');
+    const emailModal = document.getElementById('email-modal-overlay');
+    const emailModalCloseBtn = document.getElementById('email-modal-close');
+    const emailModalSaveBtn = document.getElementById('email-modal-save');
+    
+    if (changeEmailBtn) changeEmailBtn.addEventListener('click', () => openModal(emailModal));
+    if (emailModalCloseBtn) emailModalCloseBtn.addEventListener('click', () => closeModal(emailModal));
+    if (emailModalSaveBtn) {
+        emailModalSaveBtn.addEventListener('click', () => {
+            showSuccessAndClose(emailModal);
+        });
+    }
+
+    // Modal de Edição de Senha
+    const changePasswordBtn = document.getElementById('change-password-btn');
+    const passwordModal = document.getElementById('password-modal-overlay');
+    const passwordModalCloseBtn = document.getElementById('password-modal-close');
+    const passwordModalSaveBtn = document.getElementById('password-modal-save');
+
+    if (changePasswordBtn) changePasswordBtn.addEventListener('click', () => openModal(passwordModal));
+    if (passwordModalCloseBtn) passwordModalCloseBtn.addEventListener('click', () => closeModal(passwordModal));
+    if (passwordModalSaveBtn) {
+        passwordModalSaveBtn.addEventListener('click', () => {
+            showSuccessAndClose(passwordModal);
+        });
+    }
+
+    // Fecha qualquer modal ou dropdown ao clicar fora
+    window.addEventListener('click', (event) => {
+        closeAllDropdowns();
+        if (event.target.classList.contains('modal-overlay')) {
+            closeModal(event.target);
+        }
+    });
+});
+</script>
+</body>
+</html>

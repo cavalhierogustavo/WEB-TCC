@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="site-container">
+        
+        <aside class="sidebar-left">
+            <div class="logo-header">
+                <img src="../img/bruno.png" alt="Avatar do Usuário" class="logo-img">
+                <h1 class="logo-title">Bruno</h1>
+            </div>
+            <nav class="main-nav">
+                <a href="../paravoceAtletas/atletas.html" class="nav-item">
+                    <ion-icon name="home-outline"></ion-icon>
+                    <span>PARA VOCÊ</span>
+                </a>
+                <a href="../mensagens/mensagens.html" class="nav-item active">
+                    <ion-icon name="chatbubbles-outline"></ion-icon>
+                    <span>MENSAGENS</span>
+                </a>
+                <a href="../feed/clube.html" class="nav-item">
+                   <ion-icon name="person-outline"></ion-icon>
+                    <span>PERFIL</span>
+                </a>
+                <a href="../configuracoes/configuracoes.html" class="nav-item">
+                    <ion-icon name="settings-outline"></ion-icon>
+                    <span>CONFIGURAÇÕES</span>
+                </a>
+                <a href="../ParavoceSocial/social.html?action=open_modal" class="nav-item">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                    <span>NOVO POST</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="search-bar">
+                <ion-icon name="search-outline"></ion-icon>
+                <input type="text" placeholder="Pesquisar...">
+            </div>
+
+            <div class="message-filters">
+                <a href="mensagens.html"><button class="filter-btn">Todas</button></a>
+                <a href="cluble.html"><button class="filter-btn">Clubes</button></a>
+                <a href="amigo.html"><button class="filter-btn">Amigos</button></a>
+                <a href="#"><button class="filter-btn active">Não lidas</button></a>
+            </div>
+
+            <div class="chat-list">
+                <a href="#" class="chat-item">
+                    <img src="https://i.pravatar.cc/150?u=marcos" alt="Avatar" class="chat-avatar">
+                    <div class="chat-details">
+                        <p class="chat-name">Marcos <ion-icon name="shield-checkmark" class="verified-badge-chat"></ion-icon></p>
+                        <p class="chat-preview">cade o MER</p>
+                    </div>
+                    <span class="chat-time">21:07</span>
+                </a>
+            </div>
+        </main>
+
+        <aside class="sidebar-right">
+            <h3 class="sidebar-title">SUGESTÕES</h3>
+            <div class="suggestion-group">
+                <h4 class="suggestion-subtitle">CLUBES</h4>
+                <div class="suggestion-list">
+                    <div class="suggestion-item">
+                        <div class="item-details">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png" alt="Logo Chelsea">
+                            <span>Chelsea</span>
+                        </div>
+                        <button class="btn-follow">Seguir +</button>
+                    </div>
+                </div>
+            </div>
+            <div class="suggestion-group">
+                <h4 class="suggestion-subtitle">SOCIAL</h4>
+                 <div class="suggestion-list">
+                    <div class="suggestion-item">
+                        <div class="item-details">
+                            <img src="https://i.pravatar.cc/150?u=joao.p" alt="Avatar">
+                            <span>João P.</span>
+                        </div>
+                        <button class="btn-follow">Seguir +</button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+</body>
+</html>

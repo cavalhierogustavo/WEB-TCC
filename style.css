@@ -1,0 +1,183 @@
+/* ======================================= */
+/* ========= VARIÁVEIS E GLOBAIS ========= */
+/* ======================================= */
+:root {
+    --brand-blue: #1e40af;
+    --brand-blue-hover: #1e3a8a;
+    --brand-blue-light: #2563eb;
+    --gray-bg: #f3f4f6;
+    --gray-text: #374151;
+    --gray-border: #d1d5db;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--gray-bg);
+    font-family: sans-serif;
+    color: var(--gray-text);
+}
+
+/* ======================================= */
+/* ============ LAYOUT PRINCIPAL ========= */
+/* ======================================= */
+/* Adicione esta classe ao seu container principal que engloba as sidebars e o main */
+.site-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ======================================= */
+/* ======= BARRA LATERAL (ESQUERDA) ====== */
+/* ======================================= */
+.sidebar-left {
+    display: none; /* Começa escondida em telas pequenas */
+    width: 256px;
+    background-color: var(--brand-blue);
+    color: white;
+    flex-direction: column;
+    padding: 16px;
+    height: 100vh;      /* Ocupa a altura toda */
+    position: sticky;   /* Fica fixa ao rolar */
+    top: 0;
+    flex-shrink: 0;     /* Impede que ela encolha */
+}
+
+.logo-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.logo-img {
+    height: 40px;
+    width: 40px;
+    margin-right: 12px;
+}
+
+.logo-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.2s;
+}
+
+.nav-item:hover {
+    background-color: var(--brand-blue-hover);
+}
+
+.nav-item.active {
+    background-color: white;
+    color: var(--brand-blue);
+    font-weight: bold;
+}
+
+.nav-item ion-icon {
+    font-size: 24px;
+    margin-right: 12px;
+}
+
+/* ======================================= */
+/* ======= BARRA LATERAL (DIREITA) ======= */
+/* ======================================= */
+.sidebar-right {
+    display: none; /* Começa escondida em telas pequenas */
+    width: 320px;
+    background-color: white;
+    padding: 24px;
+    border-left: 1px solid var(--gray-border);
+    height: 100vh;      /* Ocupa a altura toda */
+    position: sticky;   /* Fica fixa ao rolar */
+    top: 0;
+    flex-shrink: 0;     /* Impede que ela encolha */
+}
+
+.sidebar-title {
+    color: var(--brand-blue-light);
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.suggestion-group {
+    margin-bottom: 32px;
+}
+
+.suggestion-subtitle {
+    color: var(--brand-blue-light);
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.suggestion-list > * + * {
+    margin-top: 12px;
+}
+
+.suggestion-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item-details {
+    display: flex;
+    align-items: center;
+}
+
+.item-details img {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.btn-follow {
+    color: #3b82f6;
+    border: 1px solid #3b82f6;
+    background-color: transparent;
+    border-radius: 9999px;
+    padding: 4px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.btn-follow:hover {
+    background-color: #eff6ff;
+}
+
+/* ======================================= */
+/* ============ RESPONSIVIDADE =========== */
+/* ======================================= */
+
+/* Mostra a sidebar esquerda em telas médias (tablets) e maiores */
+@media (min-width: 768px) {
+    .sidebar-left {
+        display: flex;
+    }
+}
+
+/* Mostra a sidebar direita apenas em telas grandes (desktops) */
+@media (min-width: 1024px) {
+    .sidebar-right {
+        display: block;
+    }
+}
