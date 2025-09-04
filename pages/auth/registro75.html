@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clube</title>
+    <!-- Google Fonts: Poppins -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/registro75.css">
+</head>
+<body>
+    <div class="site-container">
+        <div class="main-content-wrapper">
+            <!--Progresso -->
+            <div class="progress-section">
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill">
+                        <div class="runner-icon">
+                            <i class="fas fa-person-running"></i>
+                        </div>
+                    </div>
+                    <span class="progress-percentage">75%</span>
+                </div>
+            </div>
+
+            <!-- Contêiner-->
+            <div class="form-section">
+                <div class="header-button">
+                    <button class="clube-btn">Clube</button>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="club-name">Nome do Clube</label>
+                        <div class="input-icon-wrapper">
+                            <i class="fas fa-at icon"></i>
+                            <input type="text" id="club-name">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <div class="input-icon-wrapper">
+                            <i class="fas fa-envelope icon"></i>
+                            <input type="email" id="email">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Senha</label>
+                        <div class="input-icon-wrapper">
+                            <i class="fas fa-lock icon"></i>
+                            <input type="password" id="password">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Confirmar senha</label>
+                        <div class="input-icon-wrapper">
+                            <i class="fas fa-lock icon"></i>
+                            <input type="password" id="confirm-password">
+                        </div>
+                    </div>
+
+                    <!-- Botões de Navegação -->
+                    <div class="navigation-buttons">
+                        <button type="button" class="nav-arrow" aria-label="Voltar">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button type="submit" class="next-btn" id="submitBtn">
+                            Próximo
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="marketing-section">
+            VIM, VI, VENCI
+        </div>
+    </div>
+
+    <script src="../../js/registro.js"></script>
+</body>
+</html>
